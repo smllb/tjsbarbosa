@@ -1,26 +1,12 @@
 import express from "express";
-
+import { tjspController } from "@/controllers/tjsp/tjspSearchController";
 const tjspRouter = express.Router();
 
 tjspRouter.get("/", (req, res) => {
   res.send("TJSP Root");
 });
 tjspRouter.get("/search", (req, res) => {
-    /* 
-    nomeParte | NMPARTE
-    documentoParte | DOCPARTE
-    numeroProcesso | NUMPROC
-    nomeAdvogado | NMADVOGADO
-    numeroOab | NUMOAB
-    numeroPrecatoria | PRECATORIA
-    documentoDelegacia | DOCDELEG
-    numeroCDA | NUMCDA
-    
-    */
-    const searchResource = req.query.resource;
-
-    res.send(`selected resource: ${searchResource}`);
+    tjspController.searchByMethod(req, res)
 })
-
 
 export { tjspRouter };
