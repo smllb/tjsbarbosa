@@ -1,5 +1,5 @@
 import express from "express";
-import { tjspRouter } from "./main/routes/tjsp/tjspRouter";
+import { tjspRouter } from "./main/routes/tjsp/router";
 
 const app = express();
 const port = 3000;

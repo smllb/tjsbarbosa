@@ -1,5 +1,5 @@
 import express from "express";
-import { tjspController } from "@/controllers/tjsp/tjspSearchController";
+import { tjspController } from "@/controllers/tjsp/searchController";
 const tjspRouter = express.Router();
 
 tjspRouter.get("/", (req, res) => {
